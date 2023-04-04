@@ -7,7 +7,7 @@ const homePhotos: ResourceList = homePhotosJson
 export default function Home() {
   return (
     <main className="h-screen">
-      <h1 className="text-3xl text-blue-400">Hello Next</h1>
+      <h1 className="text-4xl text-center py-2">Steve Simkins</h1>
       <ImageGrid collection={homePhotos} />
     </main>
   )
