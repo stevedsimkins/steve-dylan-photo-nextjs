@@ -31,6 +31,7 @@ export default function ImageGrid({ collection }: ImageGridProps) {
             width={400}
             height={400}
             onClick={() => openModal(index)}
+            className="hover:opacity-30 transition-all duration-300 ease-in-out cursor-pointer"
           />
 
           {openModalIndex === index && (

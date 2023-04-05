@@ -1,4 +1,4 @@
-export default function Modal ({ photo, closeModal }) {
+export default function Modal({ photo, closeModal }) {
 
   function handleClickOutside() {
     closeModal();
@@ -9,7 +9,7 @@ export default function Modal ({ photo, closeModal }) {
   };
 
   return (
-  <div
+    <div
       className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black bg-opacity-50 transition-opacity duration-300 ease-in-out"
       onClick={handleClickOutside}
     >
@@ -18,8 +18,13 @@ export default function Modal ({ photo, closeModal }) {
         onClick={stopPropagation}
       >
         <img src={photo} alt="Modal content" className="w-full" />
+        <button
+          className="absolute top-0 right-0 p-2 m-2 text-white text-2xl rounded-full focus:outline-none"
+          onClick={closeModal}
+        >
+          &times;
+        </button>
       </div>
     </div>
   )
 };
-
