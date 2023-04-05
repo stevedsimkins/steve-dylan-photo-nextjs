@@ -13,6 +13,9 @@ content: [
       gridTemplateColumns: {
         fluid: "repeat(auto-fit,minmax(15rem,1fr))",
       },
+      fontFamily: {
+        ebGaramond: ["var(--font-ebGaramond)"],
+      }
     },
   },
   plugins: [],

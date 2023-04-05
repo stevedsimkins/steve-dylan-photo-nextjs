@@ -14,7 +14,7 @@ const Navbar = () => {
     <div class="fixed w-full top-0 bg-white sm:hidden">
       <nav class="flex justify-center items-center relative py-2">
 
-        <h1 class="text-3xl">Steve Simkins</h1>
+        <h1 class="text-3xl font-ebGaramond">Steve Simkins</h1>
         <button
           type="button"
           className="text-black hover:text-gray-400 focus:outline-none focus:text-black absolute right-4 top-3"

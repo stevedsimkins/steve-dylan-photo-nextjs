@@ -1,4 +1,11 @@
 import './globals.css'
+import { EB_Garamond } from "@next/font/google"
+
+const ebGaramond = EB_Garamond({
+  weight: ["400", "700"],
+  subsets: ["latin"],
+  variable: '--font-ebGaramond',
+})
 
 export const metadata = {
   title: 'Steve Dylan Photo',
@@ -11,7 +18,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${ebGaramond.variable}`}>
       <body>{children}</body>
     </html>
   )
