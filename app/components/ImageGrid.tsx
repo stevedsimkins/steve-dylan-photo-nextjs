@@ -36,7 +36,7 @@ export default function ImageGrid({ collection }: ImageGridProps) {
           />
 
           {openModalIndex === index && (
-            <Modal className="transition-all duration-500 ease-in-out" photo={photo.url} closeModal={closeModal} />
+            <Modal photo={photo.url} closeModal={closeModal} />
           )}
         </div>
       ))}
