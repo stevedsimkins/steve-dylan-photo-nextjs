@@ -1,10 +1,16 @@
-export default function Modal({ photo, closeModal }) {
+import Image from "next/image";
+
+interface ModalProps {
+  photo: string;
+  closeModal: () => void;
+}
+export default function Modal({ photo, closeModal }: ModalProps) {
 
   function handleClickOutside() {
     closeModal();
   };
 
-  function stopPropagation(e) {
+  function stopPropagation(e: React.MouseEvent<HTMLDivElement>) {
     e.stopPropagation();
   };
 
@@ -17,7 +23,7 @@ export default function Modal({ photo, closeModal }) {
         className="relative bg-white rounded shadow-lg transition-transform duration-300 ease-in-out transform scale-95"
         onClick={stopPropagation}
       >
-        <img src={photo} alt="Modal content" className="w-full" />
+        <Image src={photo} width={1000} height={1000} alt="Modal content" className="w-full" />
         <button
           className="absolute top-0 right-0 p-2 m-2 text-white text-2xl rounded-full focus:outline-none"
           onClick={closeModal}
