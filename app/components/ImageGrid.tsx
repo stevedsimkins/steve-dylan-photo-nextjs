@@ -26,6 +26,7 @@ export default function ImageGrid({ collection }: ImageGridProps) {
       {collection.resources.map((photo, index) => (
         <div key={photo.asset_id}>
           <Image
+            priority={true}
             src={photo.url}
             alt={photo.public_id}
             width={400}
@@ -35,7 +36,7 @@ export default function ImageGrid({ collection }: ImageGridProps) {
           />
 
           {openModalIndex === index && (
-            <Modal photo={photo.url} closeModal={closeModal} />
+            <Modal className="transition-all duration-500 ease-in-out" photo={photo.url} closeModal={closeModal} />
           )}
         </div>
       ))}

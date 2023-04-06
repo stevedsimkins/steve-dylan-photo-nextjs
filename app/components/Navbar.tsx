@@ -30,7 +30,7 @@ const Navbar = () => {
       </div>
       {isOpen && (
       <>
-        <div className="w-full h-screen bg-white z-10 flex flex-col gap-20 justify-center items-center fixed text-2xl">
+        <div className="w-full h-screen bg-white z-10 flex flex-col gap-14 justify-center items-center fixed text-2xl">
           <Link onClick={toggleMenu} href="/">Home</Link>
           <Link onClick={toggleMenu} href="/gowest">Go West</Link>
           <Link onClick={toggleMenu} href="/about">About</Link>
