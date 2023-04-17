@@ -23,10 +23,10 @@ export default function Modal({ photo, closeModal }: ModalProps) {
     >
       <Suspense fallback={<LoadingSpinner />}>
         <div
-          className="relative rounded shadow-lg transition-transform duration-700 ease-in-out transform scale-95 w-5/6"
+          className="relative rounded shadow-lg transition-transform duration-700 ease-in-out transform scale-95 xl:w-1/2 md:w-2/3 w-11/12"
           onClick={stopPropagation}
         >
-          <Image src={photo} width={1000} height={1200} alt="Modal content" className="w-full" />
+          <Image src={photo} width={800} height={800} alt="Modal content" className="w-full" />
           <button
             className="absolute top-0 right-0 p-2 m-2 text-white text-2xl rounded-full focus:outline-none"
             onClick={closeModal}
