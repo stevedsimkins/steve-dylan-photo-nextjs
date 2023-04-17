@@ -1,4 +1,5 @@
 import Navbar from './components/Navbar'
+import Sidebar from './components/Sidebar'
 import './globals.css'
 import { EB_Garamond } from "@next/font/google"
 
@@ -22,7 +23,10 @@ export default function RootLayout({
     <html lang="en" className={`${ebGaramond.variable}`}>
       <body>
         <Navbar />
-        {children}
+        <div className="flex">
+          <Sidebar />
+          {children}
+        </div>
       </body>
     </html>
   )

@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid"
 import Link from 'next/link';
 
-const Navbar = () => {
+export default function Navbar(){
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -12,10 +12,10 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="fixed w-full top-0 bg-white sm:hidden">
+    <nav className="fixed w-full top-0 bg-white lg:hidden">
       <div className="flex justify-center items-center relative py-2">
 
-        <Link href="/" className="text-3xl font-ebGaramond">Steve Simkins</Link>
+        <Link href="/" className="text-3xl font-ebGaramond">Steve Dylan</Link>
         <button
           type="button"
           className="text-black hover:text-gray-400 focus:outline-none focus:text-black absolute right-4 top-3"
@@ -30,10 +30,11 @@ const Navbar = () => {
       </div>
       {isOpen && (
       <>
-        <div className="w-full h-screen bg-white z-10 flex flex-col gap-14 justify-center items-center fixed text-2xl">
-          <Link onClick={toggleMenu} href="/">Home</Link>
+        <div className="font-ebGaramond hover:underline w-full h-screen bg-white z-10 flex flex-col gap-14 justify-center items-center fixed text-2xl">
+          <Link onClick={toggleMenu} href="/">Virginia</Link>
           <Link onClick={toggleMenu} href="/gowest">Go West</Link>
           <Link onClick={toggleMenu} href="/about">About</Link>
+          <Link onClick={toggleMenu} href="/contact">Contact</Link>
         </div>
         </>
       )}
@@ -41,4 +42,3 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;

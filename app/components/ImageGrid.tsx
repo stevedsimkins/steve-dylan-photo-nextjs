@@ -23,7 +23,7 @@ export default function ImageGrid({ collection }: ImageGridProps) {
   }
 
   return (
-    <div className="grid gap-4 mx-2">
+    <div className="mx-auto w-full gap-2 px-2 columns-1 sm:columns-2 md:columns-3">
       {collection.resources.map((photo, index) => (
         <div key={photo.asset_id}>
           <Suspense fallback={<LoadingSpinner />}>
@@ -34,7 +34,7 @@ export default function ImageGrid({ collection }: ImageGridProps) {
               width={400}
               height={400}
               onClick={() => openModal(index)}
-              className="hover:opacity-30 transition-all duration-300 ease-in-out cursor-pointer"
+              className="w-full my-2 first:mt-0 hover:opacity-30 transition-all duration-300 ease-in-out cursor-pointer"
             />
           </Suspense>
 

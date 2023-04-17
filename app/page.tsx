@@ -6,7 +6,7 @@ const homePhotos: ResourceList = homePhotosJson
 
 export default function Home() {
   return (
-    <main className="h-screen my-14">
+    <main className="h-screen my-4 mx-auto">
       <ImageGrid collection={homePhotos} />
     </main>
   )
