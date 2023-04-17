@@ -12,10 +12,10 @@ export default function Navbar(){
   };
 
   return (
-    <nav className="fixed w-full top-0 bg-white lg:hidden">
+    <nav className="fixed w-full top-0 bg-white md:hidden">
       <div className="flex justify-center items-center relative py-2">
 
-        <Link href="/" className="text-3xl font-ebGaramond">Steve Dylan</Link>
+        <Link href="/" className="text-3xl underline font-ebGaramond">Steve Dylan</Link>
         <button
           type="button"
           className="text-black hover:text-gray-400 focus:outline-none focus:text-black absolute right-4 top-3"

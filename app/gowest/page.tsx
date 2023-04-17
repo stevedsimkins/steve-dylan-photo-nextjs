@@ -6,7 +6,7 @@ const goWestPhotos: ResourceList = goWestPhotosJson
 
 export default function GoWest() {
   return (
-    <main className="h-screen my-14">
+    <main className="h-screen my-4 mx-auto">
       <ImageGrid collection={goWestPhotos} />
     </main>
   )
