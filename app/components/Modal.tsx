@@ -31,7 +31,7 @@ export default function Modal({ photo, closeModal }: ModalProps) {
             width={800} 
             height={800} 
             alt="Modal content" 
-            blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAFUlEQVR42mMsKijoYyACMI4qpK9CAF71Esu6YYjoAAAAAElFTkSuQmCC"
+            blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mMMCQo6AwADwAHGmGNhYgAAAABJRU5ErkJggg=="
             placeholder="blur"
             className="w-full" />
           <button
