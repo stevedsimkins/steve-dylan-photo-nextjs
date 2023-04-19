@@ -1,20 +1,19 @@
-export interface Resource {
-  asset_id: string;
-  public_id: string;
-  format: string;
-  version: number;
-  resource_type: string;
-  type: string;
-  created_at: string;
-  bytes: number;
-  width: number;
-  height: number;
-  folder: string;
-  url: string;
-  secure_url: string;
+/* eslint-disable no-unused-vars */
+export interface ImageProps {
+  id: number
+  height: string
+  width: string
+  public_id: string
+  format: string
+  //blurDataUrl?: string
 }
 
-export interface ResourceList {
-  resources: Resource[];
+export interface SharedModalProps {
+  index: number
+  images?: ImageProps[]
+  currentPhoto?: ImageProps
+  changePhotoId: (newVal: number) => void
+  closeModal: () => void
+  navigation: boolean
+  direction?: number
 }
-
