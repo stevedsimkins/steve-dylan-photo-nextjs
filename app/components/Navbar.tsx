@@ -12,7 +12,7 @@ export default function Navbar(){
   };
 
   return (
-    <nav className="fixed w-full top-0 bg-white md:hidden">
+    <nav className="fixed w-full bg-white sm:hidden">
       <div className="flex justify-center items-center relative py-2">
 
         <Link href="/" className="text-3xl underline font-ebGaramond">Steve Dylan</Link>

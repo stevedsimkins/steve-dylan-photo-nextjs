@@ -2,7 +2,7 @@ import Image from "next/image"
 
 export default function About() {
   return (
-    <main className="h-screen flex flex-col lg:flex-row lg:items-center justify-center gap-5 px-4">
+    <main className="h-screen flex flex-col lg:flex-row lg:items-center justify-center sm:my-0 my-10 gap-5 px-4">
       <div className="flex flex-col lg:flex-row lg:items-start justify-center gap-5">
         <Image className="lg:max-w-xl" src="/headshot_square.jpeg" alt="headshot" width={800} height={800} />
         <div className="max-w-xl">

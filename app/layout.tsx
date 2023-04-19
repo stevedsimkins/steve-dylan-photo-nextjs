@@ -22,8 +22,8 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${ebGaramond.variable}`}>
       <body>
-        <Navbar />
         <div className="flex">
+          <Navbar />
           <Sidebar />
           {children}
         </div>
