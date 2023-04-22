@@ -10,7 +10,6 @@ export default async function getImages(cloudFolder: string) {
     .max_results(400)
     .execute()
   let reducedResults: ImageProps[] = []
-  console.log(results)
 
   let i = 0
   for (let result of results.resources) {

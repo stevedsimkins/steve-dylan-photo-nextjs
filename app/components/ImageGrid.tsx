@@ -24,7 +24,7 @@ export default function ImageGrid({ images }) {
           <div className="overflow-hidden my-2 first:mt-0" key={id}>
             <Image
               alt="Steve Dylan photo"
-              className="w-full hover:opacity-30 hover:scale-110 transition-all duration-300 ease-in-out cursor-pointer"
+              className="w-full sm:hover:opacity-30 sm:hover:scale-110 transition-all duration-300 ease-in-out cursor-pointer"
               // placeholder="blur"
               // blurDataURL={blurDataUrl}
               src={`https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/image/upload/c_scale,w_720/${public_id}.${format}`}
