@@ -3,13 +3,14 @@ import { ImageProps } from "./types"
 //import getBase64ImageUrl from './generateBlurPlaceholder'
 
 
-export default async function getImages() {
+export default async function getImages(cloudFolder: string) {
     const results = await cloudinary.v2.search
-    .expression(`folder:${process.env.CLOUDINARY_FOLDER}/*`)
+    .expression(`folder:${cloudFolder}/*`)
     .sort_by('public_id', 'desc')
     .max_results(400)
     .execute()
   let reducedResults: ImageProps[] = []
+  console.log(results)
 
   let i = 0
   for (let result of results.resources) {
