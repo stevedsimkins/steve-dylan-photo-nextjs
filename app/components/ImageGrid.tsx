@@ -18,7 +18,7 @@ export default function ImageGrid({ images }) {
   }
 
   return (
-      <div className="mx-auto w-full gap-2 px-2 columns-1 sm:columns-1 md:columns-2 lg:columns-3">
+      <div className="mx-auto w-full gap-2 px-2 my-8 sm:my-0 columns-1 sm:columns-1 md:columns-2 lg:columns-3">
 
         {images.map(({ id, public_id, format }, index) => (
           <div className="overflow-hidden my-2 first:mt-0" key={id}>
@@ -30,10 +30,6 @@ export default function ImageGrid({ images }) {
               src={`https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/image/upload/c_scale,w_720/${public_id}.${format}`}
               width={720}
               height={480}
-              sizes="(max-width: 640px) 100vw,
-                  (max-width: 1280px) 50vw,
-                  (max-width: 1536px) 33vw,
-                  25vw"
               onClick={()=> openModal(index)}
             />
             {openModalIndex === index && (
