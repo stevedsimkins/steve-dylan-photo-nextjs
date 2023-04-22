@@ -1,34 +1,15 @@
-import type { NextPage } from "next"
 import Image from "next/image"
 import { ImageProps } from "./utils/types"
 import getImages from "./utils/getImages"
+import ImageGrid from "./components/ImageGrid"
 
-export default async function Home(){
+export default async function Home() {
 
   const images: ImageProps[] = (await getImages()).props.images
 
   return (
     <main className="h-screen my-4 mx-auto">
-          <div className="mx-auto w-full gap-2 px-2 columns-1 sm:columns-1 md:columns-2 lg:columns-3">
-
-      {images.map(({ id, public_id, format }) => (
-        <div className="overflow-hidden my-2 first:mt-0" key={id}>
-        <Image
-          alt="Steve Dylan photo"
-          className="w-full hover:opacity-30 hover:scale-110 transition-all duration-300 ease-in-out cursor-pointer"
-          // placeholder="blur"
-          // blurDataURL={blurDataUrl}
-          src={`https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/image/upload/c_scale,w_720/${public_id}.${format}`}
-          width={720}
-          height={480}
-          sizes="(max-width: 640px) 100vw,
-                  (max-width: 1280px) 50vw,
-                  (max-width: 1536px) 33vw,
-                  25vw"
-        />
-        </div>
-      ))}
-      </div>
+      <ImageGrid images={images} />
     </main>
   )
 }

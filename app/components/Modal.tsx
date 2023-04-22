@@ -3,10 +3,11 @@ import { Suspense } from "react";
 import LoadingSpinner from "./LoadingSpinner";
 
 interface ModalProps {
-  photo: string;
+  publicId: string;
+  format: string;
   closeModal: () => void;
 }
-export default function Modal({ photo, closeModal }: ModalProps) {
+export default function Modal({ publicId, format, closeModal }: ModalProps) {
 
   function handleClickOutside() {
     closeModal();
@@ -27,12 +28,10 @@ export default function Modal({ photo, closeModal }: ModalProps) {
           onClick={stopPropagation}
         >
           <Image 
-            src={photo} 
+            src={`https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/image/upload/c_scale,w_720/${publicId}.${format}`} 
             width={800} 
             height={800} 
             alt="Modal content" 
-            blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mMMCQo6AwADwAHGmGNhYgAAAABJRU5ErkJggg=="
-            placeholder="blur"
             className="w-full" />
           <button
             className="absolute top-0 right-0 p-2 m-2 text-white text-2xl rounded-full focus:outline-none"
