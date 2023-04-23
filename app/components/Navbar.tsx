@@ -18,7 +18,7 @@ export default function Navbar(){
         <Link href="/" className="text-3xl underline font-ebGaramond">Steve Dylan</Link>
         <button
           type="button"
-          className="text-black hover:text-gray-400 focus:outline-none focus:text-black absolute right-4 top-3"
+          className="text-black hover:text-gray-400 z-30 focus:outline-none focus:text-black absolute right-4 top-3"
           onClick={toggleMenu}
         >
           {isOpen ? (
@@ -28,16 +28,14 @@ export default function Navbar(){
           )}
         </button>
       </div>
-      {isOpen && (
       <>
-        <div className="font-ebGaramond hover:underline w-full h-screen bg-white z-10 flex flex-col gap-14 justify-center items-center fixed text-2xl">
+        <div className={`font-ebGaramond hover:underline w-full h-screen bg-white z-10 flex flex-col gap-14 justify-center items-center fixed text-2xl transition-all duration-500 ease-in-out ${isOpen ? 'top-0' : '-top-full'}`}>
           <Link onClick={toggleMenu} href="/">Virginia</Link>
           <Link onClick={toggleMenu} href="/gowest">Go West</Link>
           <Link onClick={toggleMenu} href="/about">About</Link>
           <Link onClick={toggleMenu} href="/contact">Contact</Link>
         </div>
         </>
-      )}
     </nav>
   );
 };
