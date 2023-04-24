@@ -2,6 +2,7 @@ import Navbar from './components/Navbar'
 import Sidebar from './components/Sidebar'
 import './globals.css'
 import { EB_Garamond } from "@next/font/google"
+import { Analytics } from "@vercel/analytics/react"
 
 const ebGaramond = EB_Garamond({
   weight: ["400", "700"],
@@ -26,6 +27,7 @@ export default function RootLayout({
           <Navbar />
           <Sidebar />
           {children}
+          <Analytics />
         </div>
       </body>
     </html>
