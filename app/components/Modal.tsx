@@ -5,9 +5,10 @@ import LoadingSpinner from "./LoadingSpinner";
 interface ModalProps {
   publicId: string;
   format: string;
+  blurDataUrl: string;
   closeModal: () => void;
 }
-export default function Modal({ publicId, format, closeModal }: ModalProps) {
+export default function Modal({ publicId, format, blurDataUrl,  closeModal }: ModalProps) {
 
   function handleClickOutside() {
     closeModal();
@@ -32,6 +33,8 @@ export default function Modal({ publicId, format, closeModal }: ModalProps) {
             width={800} 
             height={800} 
             alt="Modal content" 
+            placeholder="blur" 
+            blurDataURL={blurDataUrl}
             className="w-full" />
           <button
             className="absolute top-0 right-0 p-2 m-2 text-white text-2xl rounded-full focus:outline-none"

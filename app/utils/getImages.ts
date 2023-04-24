@@ -1,6 +1,6 @@
 import cloudinary from "./cloudinary"
 import { ImageProps } from "./types"
-//import getBase64ImageUrl from './generateBlurPlaceholder'
+import getBase64ImageUrl from './generateBlurPlaceholder'
 
 
 export default async function getImages(cloudFolder: string) {
@@ -23,14 +23,14 @@ export default async function getImages(cloudFolder: string) {
     i++
   }
 
-  //const blurImagePromises = results.resources.map((image: ImageProps) => {
-    //return getBase64ImageUrl(image)
-  //})
-  //const imagesWithBlurDataUrls = await Promise.all(blurImagePromises)
+  const blurImagePromises = results.resources.map((image: ImageProps) => {
+    return getBase64ImageUrl(image, cloudFolder)
+  })
+  const imagesWithBlurDataUrls = await Promise.all(blurImagePromises)
 
-  //for (let i = 0; i < reducedResults.length; i++) {
-    //reducedResults[i].blurDataUrl = imagesWithBlurDataUrls[i]
-  //}
+  for (let i = 0; i < reducedResults.length; i++) {
+    reducedResults[i].blurDataUrl = imagesWithBlurDataUrls[i]
+  }
 
   return {
     props: {
