@@ -2,8 +2,7 @@
 
 import Image from "next/image"
 import Modal from "./Modal"
-import { Suspense, useState } from "react"
-import LoadingSpinner from "./LoadingSpinner";
+import { useState } from "react"
 
 export default function ImageGrid({ images }) {
   const [openModalIndex, setOpenModalIndex] = useState<number | null>(null);
