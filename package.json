@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "turbo-dev": "next dev --turbo",
+    "turbo-build": "next build --turbo"
   },
   "dependencies": {
     "@heroicons/react": "^2.0.17",
@@ -17,10 +19,10 @@
     "@vercel/analytics": "^1.0.0",
     "cloudinary": "^1.36.1",
     "eslint": "8.37.0",
-    "eslint-config-next": "13.2.4",
-    "next": "13.2.4",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
+    "eslint-config-next": "^13.4.0",
+    "next": "^13.4.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "typescript": "5.0.3"
   },
   "devDependencies": {
