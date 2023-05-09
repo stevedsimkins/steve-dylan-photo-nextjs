@@ -31,7 +31,12 @@ export default function Navbar() {
           </button>
         </div>
         {isOpen && (
-          <motion.div key="modal" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ ease: "easeInOut", duration: 0.5}} exit={{ opacity: 0}} className={`font-ebGaramond hover:underline w-full h-screen bg-white z-10 flex flex-col gap-14 justify-center items-center fixed text-2xl transition-all duration-500 ease-in-out top-0`}>
+          <motion.div 
+            key="navModal" 
+            initial={{ opacity: 0 }} 
+            animate={{ opacity: 1 }} 
+            exit={{ opacity: 0}} 
+            className={`font-ebGaramond hover:underline w-full h-screen bg-white z-10 flex flex-col gap-14 justify-center items-center fixed text-2xl transition-all duration-500 ease-in-out top-0`}>
             <Link onClick={toggleMenu} href="/">Virginia</Link>
             <Link onClick={toggleMenu} href="/gowest">Go West</Link>
             <Link onClick={toggleMenu} href="/about">About</Link>
