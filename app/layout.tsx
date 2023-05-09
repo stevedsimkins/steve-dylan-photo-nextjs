@@ -21,9 +21,9 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${ebGaramond.variable}`}>
+    <html lang="en">
       <body>
-        <div className="flex">
+        <div className={`flex ${ebGaramond.variable}`}>
           <Navbar />
           <Sidebar />
           {children}
