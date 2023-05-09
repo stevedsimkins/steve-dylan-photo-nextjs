@@ -8,6 +8,7 @@ const ebGaramond = EB_Garamond({
   weight: ["400", "700"],
   subsets: ["latin"],
   variable: '--font-ebGaramond',
+  display: 'swap'
 })
 
 export const metadata = {
@@ -21,9 +22,9 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${ebGaramond.variable}`}>
       <body>
-        <div className={`flex ${ebGaramond.variable}`}>
+        <div className='flex'>
           <Navbar />
           <Sidebar />
           {children}
