@@ -8,7 +8,7 @@ export default function Contact() {
         <div className="flex gap-1">
           <p>email</p>
           <p>&bull;</p>
-          <Link className="font-ebGaramond flex items-center gap-2 hover:underline" href="mailto:stevedsimkins@gmail.com">hello@stevedylanphoto.com</Link>
+          <Link className="font-ebGaramond flex items-center gap-2 hover:underline" href="mailto:hello@stevedsimkins.dev">hello@stevedylanphoto.com</Link>
         </div>
         <div className="flex gap-1">
           <p>instagram</p>
