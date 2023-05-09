@@ -27,7 +27,7 @@ export default function RootLayout({
           <Navbar />
           <Sidebar />
           {children}
-          {/*             <Analytics /> */}
+          <Analytics />
         </div>
       </body>
     </html>
