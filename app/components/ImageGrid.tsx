@@ -3,6 +3,7 @@
 import Image from "next/image"
 import Modal from "./Modal"
 import { useState } from "react"
+import { AnimatePresence } from "framer-motion";
 
 export default function ImageGrid({ images }) {
   const [openModalIndex, setOpenModalIndex] = useState<number | null>(null);
@@ -31,9 +32,11 @@ export default function ImageGrid({ images }) {
               height={480}
               onClick={()=> openModal(index)}
             />
+            <AnimatePresence>
             {openModalIndex === index && (
-              <Modal publicId={images[openModalIndex].public_id} blurDataUrl={images[openModalIndex].blurDataUrl} format={images[openModalIndex].format} closeModal={closeModal} />
+              <Modal publicId={images[openModalIndex].public_id} blurDataUrl={images[openModalIndex].blurDataUrl} format={images[openModalIndex].format} closeModal={closeModal} key={index} />
             )}
+          </AnimatePresence>
           </div>
         ))}
       </div>

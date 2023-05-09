@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { motion } from "framer-motion"
 
 interface ModalProps {
   publicId: string;
@@ -17,7 +18,10 @@ export default function Modal({ publicId, format, blurDataUrl,  closeModal }: Mo
   };
 
   return (
-    <div
+    <motion.div
+      initial={{ opacity: 0}}
+      animate={{ opacity: 1}}
+      exit={{ opacity: 0}}
       className="hidden fixed inset-0 z-40 sm:flex items-center justify-center p-4 bg-black bg-opacity-75 transition-all duration-700 ease-in-out"
       onClick={handleClickOutside}
     >
@@ -40,6 +44,6 @@ export default function Modal({ publicId, format, blurDataUrl,  closeModal }: Mo
             &times;
           </button>
         </div>
-    </div>
+    </motion.div>
   )
 };
